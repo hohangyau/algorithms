@@ -1,0 +1,11 @@
+1. Initial a 2d array(dp), storing the shortest distance between self, upper, lower, left and right adjcent.
+2. First loop through the matrix from the upper left corner to the lower right corner. If current node is 0, corresponding dp[i][j] is also 0;
+3. If not zero, store the shortest distance between self, upper adjcent and left adjcent item in dp.
+4. Loop through the dp matrix, this time from the lower right corner to the upper left corner.
+5. For every non-0 item, find and store the shortest distance between self, lower adjcent and right adjcent item at each node.
+
+Time Complexity: 2 * n^2 ~= n^2 (iterate the matrix, then 
+Space Complexity: n^2 
+
+Mistakes:
+1. Use dfs and dfs to find shortest distance to any 0s (4 directions)

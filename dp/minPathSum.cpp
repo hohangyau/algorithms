@@ -42,7 +42,7 @@ int minPathSum2(vector<vector<int>>& grid) { //update grid in place
             grid[i][0] = grid[i-1][0] + grid[i][0];
         }
         
-         for(int i = 1; i < n; ++i ) {
+        for(int i = 1; i < n; ++i ) {
             grid[0][i] = grid[0][i-1] + grid[0][i];
         }
         
