@@ -1,0 +1,12 @@
+This problem consits of two parts:
+	1. Find the target treeNode (logN sarch).
+	2. If found, perform delete.
+	
+To delete a node from a BST, we will encounter 3 situations with respect to the number of child of the target node, each will be handled differently.
+1. No child: simple delete the node and return NULL;
+2. Only one child: making currentNode pointing to the existing node and return; i.e.: currentNode = currentNode->left or currentNode = currentNode->right;
+3. Both child exist. The trickiest part, there will be two approaches, 
+a): replace the currentNode with the minimum node in the right child, 
+because, the minimum node in the right subTree is always greater than any of the node in the left subTree, hence, the BST is still valid.
+b): similar to a), but replace the currentNode with the maximum value node in the left subTree. Same effort.  When min or max is found, remember 
+perform deleteNode again, or an inner loop will be created (2 nodes will same values). 
