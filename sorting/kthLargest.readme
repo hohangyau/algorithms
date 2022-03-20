@@ -1,0 +1,6 @@
+1. sort the array
+2. return nums[nums.size()-k];
+
+smart way:
+1. Use selection algorithm(partion method, the same one used in quicksort)
+2. Only sort the partion containg nth largest element;

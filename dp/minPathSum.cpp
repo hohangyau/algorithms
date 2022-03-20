@@ -26,7 +26,8 @@ int minPathSum(vector<vector<int>>& grid) {
                 dp[i][j] = grid[i][j] + min(dp[i-1][j], dp[i][j-1]);
             }
         }
-      for(int i = 0; i < m; ++i) {
+     
+	 for(int i = 0; i < m; ++i) {
         for(int j = 0; j < n; ++j){
            cout <<  dp[i][j] ; 
 		   cout << '\t';

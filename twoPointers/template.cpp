@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include <cstdint>
 using namespace std;
+bool dfs(vector<vector<char>>& board, int index, pair<int, int> coor, string word);
 
 
 int main (){

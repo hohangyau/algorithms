@@ -5,14 +5,20 @@
 #include <unordered_map>
 #include <cstdint>
 using namespace std;
-bool dfs(vector<vector<char>>& board, int index, pair<int, int> coor, string word);
 
+void tokenize(string s, string del = " "){
+	int start = 0;
+	int end = s.find(del);
+	while( end != -1) {
+		
+	}
+}
 
 int main (){
 
 	//vector<vector<char>> board {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
 	//bool res = exist(board, "AAB");
-
+	string str = "";
 	cout << res  << endl;
 
 
