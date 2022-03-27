@@ -1,0 +1,6 @@
+1. Iterate through the nums array from left, calculate the cumulative sum except self, store the value in result array.
+2. Set the intial value of rightValueSoFar to 1, iterate through the result array from right, multiply the value by rightValueSoFar, update the rightValueSoFar by multiply it to nums[i]
+
+Explaination:
+This problem can be divided into two sub problems, the accumulative sum from left hand side X the accumulative sum from right hand side
+For instance, given an array [20, 30, 40, 50, 60], the product of item 40 is actually equal to left: 20*30 multiply by right: 50 * 60
