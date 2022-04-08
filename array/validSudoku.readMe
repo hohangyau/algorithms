@@ -1,0 +1,4 @@
+Very straightforward, using 3 arrays to represent each of the three rules(col, row and grid);
+
+Tips:
+	To calculate the grid index from row and col index, one can use this formula: gridIdx = i / 3 * 3 + j / 3
