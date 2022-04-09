@@ -14,7 +14,28 @@ using namespace std;
      TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 	 
 };
-
+    TreeNode* invertTree(TreeNode* root) {
+        if(!root) return root;
+        if(!root->left && !root->right) return root;
+        
+        if(!root->left){
+            root->left = invertTree(root->right);
+            root->right = NULL;
+            return root;
+        }
+        
+        if(!root->right){
+            root->right = invertTree(root->left);
+            root->left = NULL;
+            return root;
+        }
+        
+        TreeNode* temp = root->left;
+        root->left = invertTree(root->right); 
+        root->right = invertTree(temp);
+        
+        return root;
+    }
 int main (){
 
 	//vector<vector<char>> board {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
